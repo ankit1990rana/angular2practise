@@ -12,6 +12,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { DataDrivenFormComponent } from './data-driven-form/data-driven-form.component';
 import { LoginComponent } from './login/login.component';
 
+import { userDetailGuard } from  "./user-detail/user-detail.guard";
+
 @NgModule({
     declarations: [
         UserComponent,
@@ -27,6 +29,9 @@ import { LoginComponent } from './login/login.component';
         ReactiveFormsModule,
         HttpModule,
         userRouting
+        ],
+    providers : [
+        userDetailGuard
         ]
 })
 export class userModule {}

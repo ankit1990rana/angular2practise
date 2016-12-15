@@ -5,13 +5,15 @@ import { UserDetailComponent } from "./user-detail/user-detail.component";
 import { CreateUserComponent } from "./create-user/create-user.component";
 import { DataDrivenFormComponent } from "./data-driven-form/data-driven-form.component";
 
+import { userDetailGuard } from  "./user-detail/user-detail.guard";
+
 const USER_ROUTES: Routes = [
     {
         path: '', component: UserComponent, children: [
             { path: 'list', component: UserListComponent },
             {path : 'dataform', component : DataDrivenFormComponent},
             { path: 'create', component: CreateUserComponent },
-            { path: 'detail', component: UserDetailComponent },
+            { path: 'detail', component: UserDetailComponent, canActivate : [ userDetailGuard ] },
             { path: 'detail/:id', component: UserDetailComponent }
         ]
     },
