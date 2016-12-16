@@ -9,12 +9,14 @@ import { MapsComponent } from './maps/maps.component';
 import { HomeComponent } from './home/home.component';
 
 import { routing } from './app.routes';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapsComponent,
-    HomeComponent
+    HomeComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,

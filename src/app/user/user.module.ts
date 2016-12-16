@@ -11,8 +11,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { DataDrivenFormComponent } from './data-driven-form/data-driven-form.component';
 import { LoginComponent } from './login/login.component';
-
-import { userDetailGuard } from  "./user-detail/user-detail.guard";
+/** Guards */
+import { userDetailGuard } from "./user-detail/user-detail.guard";
+import { authGuard } from "./auth.guard";
 
 @NgModule({
     declarations: [
@@ -24,14 +25,15 @@ import { userDetailGuard } from  "./user-detail/user-detail.guard";
         LoginComponent
     ],
     imports: [
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpModule,
+         CommonModule,
+         FormsModule,
+         ReactiveFormsModule,
+         HttpModule,
         userRouting
         ],
-    providers : [
-        userDetailGuard
+        providers : [
+         userDetailGuard,
+         authGuard
         ]
 })
 export class userModule {}
