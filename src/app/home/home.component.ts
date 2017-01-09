@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+ public sliderIndex:Number;
+  constructor() {
+    let n =1;
+     setInterval(() => {
+      this.sliderIndex = n;
+      n++;
+      console.log(n);
+    }, 1000);
+   }
 
   ngOnInit() {
   }

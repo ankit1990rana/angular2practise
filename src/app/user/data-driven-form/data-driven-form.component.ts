@@ -46,7 +46,6 @@ export class DataDrivenFormComponent {
   checkEmpty(elm: FormControl):{ [error : string]: string }{
     if(elm.value.length == 0 ){
       return {error : "Required Field"};
-      
     }
     return null;
   } 
